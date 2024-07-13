@@ -10,12 +10,19 @@ import { debounceTime } from 'rxjs';
   templateUrl: './header.component.html',
   styles: '',
 })
+
 export class HeaderComponent {
-  stateService = inject(StateService);
+
+  constructor(
+    private stateService: StateService
+  ) {}
+  
   searchControl = new FormControl('');
+
   ngOnInit() {
     this.searchControl.valueChanges.pipe(debounceTime(250)).subscribe((value) => {
       this.stateService.searchSubject.next(value || '');
     });
   }
+
 }

@@ -12,5 +12,4 @@ import { SidebarComponent } from './components/sidebar/sidebar.component';
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
-  title = 'todo-app';
 }

@@ -8,6 +8,9 @@ import { Component } from '@angular/core';
   templateUrl: './page-title.component.html',
   styleUrl: './page-title.component.scss'
 })
+
 export class PageTitleComponent {
-  dateNow=new Date();
+
+  dateNow = new Date();
+
 }
